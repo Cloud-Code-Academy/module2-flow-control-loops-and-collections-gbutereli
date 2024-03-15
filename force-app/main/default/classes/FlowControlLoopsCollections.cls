@@ -240,15 +240,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers containing the numbers 1, 2, and 3.
      */
     public static List<Integer> createAndPopulateList() {
-        // Create a new list of integers
-
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
-
-        // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+       
+        List<Integer> numList = new List<Integer>();
+        numList.add(1);
+        numList.add(2);
+        numList.add(3);
+        
+        return numList;
     }
 
     /**
@@ -261,10 +259,8 @@ public with sharing class FlowControlLoopsCollections {
         // Create a new list of integers and add numbers 1 to 5
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
-        // Remove the 3rd element (number 3) from the list
-        
-        // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        numberList.remove(2);
+        return numberList; 
     }
 
     /**
@@ -275,15 +271,14 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers from 1 to 'n'.
      */
     public static List<Integer> createIntegerList(Integer n) {
-        // Create a new list of integers 
 
-        /*
-        for() {
-            //add integer to the list
+        List<Integer> numList = new List<Integer>();
+        for(Integer i = 1; i <= n; i++){
+            if(i <= n){
+                numList.add(i);
+            }
         }
-        */ 
-
-        return null; // Replace null with the variable you used to store the result
+        return numList;
     }
 
     /**
@@ -295,12 +290,9 @@ public with sharing class FlowControlLoopsCollections {
      * @return A Set of unique strings.
      */
     public static Set<String> createStringSet(List<String> inputList) {
-        // Create a new Set of strings
-        Set<String> stringSet = new Set<String>();
-
-        //add strings to the set
-
-        return null; // Replace null with the variable you used to store the result
+        
+        Set<String> stringSet = new Set<String>(inputList);
+        return stringSet; 
     }
 
     /**
@@ -311,12 +303,15 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
+        Integer result = 0;
 
-        // Loop through the list of integers
-            // if the number is negative skip this iteration
-        
-
-        return null; // Replace null with the variable you used to store the result
+        for(Integer num : numbers){
+            if(num > 0){
+                result += num;
+            }else{
+                continue;
+            }
+        } return result; 
     }
 
     /**
